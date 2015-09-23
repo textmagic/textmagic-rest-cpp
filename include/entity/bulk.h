@@ -1,28 +1,17 @@
 #ifndef TEXTMAGIC_BULK_H
 #define TEXTMAGIC_BULK_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class BulkModel:public Textmagic::BaseModel {
 		public:
 			BulkModel() : Textmagic::BaseModel(){};
 			BulkModel(const std::string& data) : Textmagic::BaseModel(data){};
 
-			void deserialize() {
-				Json::Value root = this->asJsonValue();
-			 	id = root.get("id", "").asString();
-			 	status = root.get("status", "").asString();
-			 	itemsProcessed = root.get("itemsProcessed", 0).asInt();
-			 	itemsTotal = root.get("itemsTotal", 0).asInt();
-			 	createdAt = root.get("createdAt", "").asString();
-			 	sessionId = root.get("sessionId", "").asString();
-			 	text = root.get("text", "").asString();
-			};
-
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				return data;
-			};
-
+			void deserialize();
+			Textmagic::Rest::RequestData serialize();
+			
 			std::string id;
 			std::string status;
 			int itemsProcessed;

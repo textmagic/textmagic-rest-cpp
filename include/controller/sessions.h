@@ -1,3 +1,9 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/session.h>
+#include <entity/message.h>
+
 namespace Textmagic {
 	class SessionsController: public Textmagic::BaseController<Textmagic::SessionModel>   {
 		public:

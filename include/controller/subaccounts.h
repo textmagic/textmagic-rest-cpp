@@ -1,3 +1,5 @@
+#pragma once
+
 namespace Textmagic {
 	class SubaccountsController: public Textmagic::BaseController<Textmagic::UserModel>   {
 		public:

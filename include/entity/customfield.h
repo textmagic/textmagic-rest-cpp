@@ -1,25 +1,17 @@
 #ifndef TEXTMAGIC_CUSTOMFIELD_H
 #define TEXTMAGIC_CUSTOMFIELD_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class CustomfieldModel:public Textmagic::BaseModel {
 		public:
 			CustomfieldModel() : Textmagic::BaseModel(){};
 			CustomfieldModel(const std::string& data) : Textmagic::BaseModel(data){};
 
-			void deserialize() {
-				Json::Value root = this->asJsonValue();
-			 	id = root.get("id", "").asString();
-			 	name = root.get("name", "").asString();
-			 	createdAt = root.get("createdAt", "").asString();
-			};
-
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				data["name"] = name;
-				return data;
-			};
-
+			void deserialize();
+			Textmagic::Rest::RequestData serialize();
+		
 			std::string id;
 			std::string name;
 			std::string createdAt;

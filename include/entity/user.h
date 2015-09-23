@@ -1,6 +1,8 @@
 #ifndef TEXTMAGIC_USER_H
 #define TEXTMAGIC_USER_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class UserModel:public Textmagic::BaseModel {
 		public:

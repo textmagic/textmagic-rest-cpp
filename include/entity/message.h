@@ -1,6 +1,8 @@
 #ifndef TEXTMAGIC_MESSAGE_H
 #define TEXTMAGIC_MESSAGE_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class MessageModel:public Textmagic::BaseModel {
 		public:

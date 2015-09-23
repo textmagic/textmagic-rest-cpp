@@ -1,3 +1,13 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/base.h>
+#include <entity/invoice.h>
+#include <entity/stat.h>
+#include <entity/spent.h>
+#include <entity/source.h>
+#include <entity/user.h>
+
 namespace Textmagic {
 	class MiscController: public Textmagic::BaseController<Textmagic::BaseModel>   {
 		public:
