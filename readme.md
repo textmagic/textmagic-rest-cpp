@@ -2,6 +2,15 @@
 
 TextMagic API C++ wrapper will save you a lot of time, as it includes all the necessary API commands and tests. It will just take you a few seconds to download it from GitHub and install it into your own app or software. After installation, you’ll then be able to send text messages.
 
+<!---
+sms api for C++
+C++ api to send sms
+C++ sms api
+send sms from C++
+C++ send sms messages
+C++ library send sms messages
+-->
+
 ## Code Example
 
 #include <iostream>  
