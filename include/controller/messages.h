@@ -1,3 +1,5 @@
+#pragma once
+
 namespace Textmagic {
 	class MessagesController: public Textmagic::BaseController<Textmagic::MessageModel>   {
 		public:

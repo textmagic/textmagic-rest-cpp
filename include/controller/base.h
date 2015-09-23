@@ -1,3 +1,6 @@
+#ifndef TEXTMAGIC_BASECONTR_H
+#define TEXTMAGIC_BASECONTR_H
+
 #include <vector>
 #include <map>
 #include <string>
@@ -153,3 +156,5 @@ namespace Textmagic {
 
 	};
 }
+
+#endif /* TEXTMAGIC_BASECONTR_H */

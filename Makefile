@@ -5,8 +5,6 @@ INCLUDE = -Iinclude -I$(JSONCPP_INCLUDE)
 EXAPMPLE_SRC   = $(wildcard ./example/*.cpp)
 ENTITY_SRC     = $(wildcard ./src/entity/*.cpp)
 CONTROLLER_SRC = $(wildcard ./src/controller/*.cpp)
-ENTITY_H       = $(wildcard ./include/entity/*.h)
-CONTROLLER_H   = $(wildcard ./include/controller/*.h)
 
 EXAPMPLE_AIMS   = $(subst ./example/,, $(EXAPMPLE_SRC:.cpp=_example))
 ENTITY_AIMS     = $(subst ./src/entity/,, $(ENTITY_SRC:.cpp=_model.o))
@@ -21,20 +19,20 @@ all: lib $(EXAPMPLE_AIMS)
 
 %_example: %_example.o
 		@echo $@
-		$(CXX)  -o bin/$@  obj/$@.o -lcurl -L./lib -ltextmagic
+		$(CXX)  -o bin/$@  obj/$@.o -lcurl -L./lib -ltextmagic  $(LIBRARY_OBJ)
 
 lib: $(LIBRARY_AIMS) $(ENTITY_AIMS) $(CONTROLLER_AIMS)
-		ar rcs lib/libtextmagic.a $(ENTITY_OBJ) $(CONTROLLER_OBJ) $(LIBRARY_OBJ)
+		ar rcs lib/libtextmagic.a $(LIBRARY_OBJ) $(ENTITY_OBJ) $(CONTROLLER_OBJ)
 
 clean:
 		rm -rf bin/*
 		rm -rf obj/*
 		rm -rf lib/*
 
-%_model.o: $(ENTITY_SRC)
+%_model.o: ./src/entity/%.cpp 
 		$(CXX)  -Wall -c -o obj/$(@F) $< $(INCLUDE)
 
-%_controller.o: $(CONTROLLER_SRC)
+%_controller.o: ./src/controller/%.cpp
 		$(CXX)  -Wall -c -o obj/$(@F) $< $(INCLUDE)
 
 %_example.o: ./example/%.cpp

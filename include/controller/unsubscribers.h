@@ -1,3 +1,5 @@
+#pragma once
+
 namespace Textmagic {
 	class UnsubscribersController: public Textmagic::BaseController<Textmagic::UnsubscriberModel>   {
 		public:

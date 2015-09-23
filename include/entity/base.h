@@ -23,16 +23,8 @@ namespace Textmagic {
 				return response;
 			};
 
-			Json::Value asJsonValue(){
-				Json::Value root;
-				Json::Reader reader;
-				if (!reader.parse(response, root)){
-					throw  "Failed to parse responce\n" + reader.getFormattedErrorMessages();
-					return root;
-				}
-				return root;
-            };
-
+			Json::Value asJsonValue();
+		
 			void deserialize(){
 				return;
 		    };

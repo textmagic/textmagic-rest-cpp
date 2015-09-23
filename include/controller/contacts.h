@@ -1,3 +1,9 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/contact.h>
+#include <entity/list.h>
+
 namespace Textmagic {
 	class ContactsController: public Textmagic::BaseController<Textmagic::ContactModel>   {
 		public:

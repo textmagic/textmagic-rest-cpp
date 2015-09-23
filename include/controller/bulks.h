@@ -1,3 +1,8 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/bulk.h>
+
 namespace Textmagic {
 	class BulksController: public Textmagic::BaseController<Textmagic::BulkModel>   {
 		public:

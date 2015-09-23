@@ -1,3 +1,9 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/schedule.h>
+
+
 namespace Textmagic {
 	class SchedulesController: public Textmagic::BaseController<Textmagic::ScheduleModel>   {
 		public:

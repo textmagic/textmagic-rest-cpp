@@ -1,6 +1,8 @@
 #ifndef TEXTMAGIC_SENDRESULT_H
 #define TEXTMAGIC_SENDRESULT_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class SendResultModel:public Textmagic::BaseModel {
 		public:
