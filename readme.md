@@ -12,7 +12,7 @@ C++ library send sms messages
 -->
 
 ## Code Example
-
+```
 #include <iostream>  
 #include <textmagic.h>
 
@@ -27,10 +27,11 @@ if (tm.Contacts().isError){
 } else {  
     // print contact  
 }  
+```
 
 ## Installation
 To make a static link library, run the following command:
-    make lib
+   ``` make lib ```
 If you want to try our examples, run the following command:
     make all
     
@@ -44,10 +45,11 @@ gcc compiler v4.2.1 or higher
 
 ## Examples
 To run one of examples please use following commands:
+```
 cd PROJECT_DIR
 make contacts_example
 bin/contacts_example USERNAME API_KEY
-
+```
 
 ## Contributors
 https://github.com/dmitry-textmagic
