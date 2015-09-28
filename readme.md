@@ -33,7 +33,7 @@ if (tm.Contacts().isError){
 To make a static link library, run the following command:
    ``` make lib ```
 If you want to try our examples, run the following command:
-    make all
+   ``` make all ```
     
 ## Requirements
 The C++ wrapper for TextMagic API has the following requirements:
@@ -52,9 +52,9 @@ bin/contacts_example USERNAME API_KEY
 ```
 
 ## Contributors
-https://github.com/dmitry-textmagic
-https://github.com/kuzinmv
-https://github.com/pvclever
+* https://github.com/dmitry-textmagic
+* https://github.com/kuzinmv
+* https://github.com/pvclever
 
 
 ## License
