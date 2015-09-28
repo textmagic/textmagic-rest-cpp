@@ -23,9 +23,9 @@ Textmagic::Client tm("USERNAME", "API_KEY");
 const char* kContactId = "12345";  
 Textmagic::ContactModel contact = tm.Contacts().get(kContactId, vars);  
 if (tm.Contacts().isError){  
-   // print error  
+   // error handler
 } else {  
-    // print contact  
+   // use contact 
 }  
 ```
 
@@ -53,8 +53,10 @@ bin/contacts_example USERNAME API_KEY
 
 ## Contributors
 https://github.com/dmitry-textmagic
+https://github.com/kuzinmv
+https://github.com/pvclever
+
 
 ## License
 
-http://www.opensource.org/licenses/bsd-license.php  
-New BSD license
+The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
