@@ -1,3 +1,9 @@
+#pragma once
+
+#include "base.h"
+#include <entity/chat.h>
+#include <entity/message.h>
+
 namespace Textmagic {
 	class ChatsController: public Textmagic::BaseController<Textmagic::ChatModel>   {
 		public:

@@ -1,3 +1,7 @@
+//#pragma once
+#include <controller/base.h>
+#include <entity/customfield.h>
+
 namespace Textmagic {
 	class CustomfieldsController: public Textmagic::BaseController<Textmagic::CustomfieldModel>   {
 		public:

@@ -1,3 +1,8 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/reply.h>
+
 namespace Textmagic {
 	class RepliesController: public Textmagic::BaseController<Textmagic::ReplyModel>   {
 		public:

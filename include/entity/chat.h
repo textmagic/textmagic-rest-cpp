@@ -1,26 +1,17 @@
 #ifndef TEXTMAGIC_CHAT_H
 #define TEXTMAGIC_CHAT_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class ChatModel:public Textmagic::BaseModel {
 		public:
 			ChatModel() : Textmagic::BaseModel(){};
 			ChatModel(const std::string& data) : Textmagic::BaseModel(data){};
 
-			void deserialize() {
-				Json::Value root = this->asJsonValue();
-			 	id = root.get("id", "").asString();
-			 	phone = root.get("phone", "").asString();
-			 	contactId = root.get("contactId", "").asString();
-			 	unread = root.get("unread", 0).asInt();
-			 	updatedAt = root.get("updatedAt", "").asString();
-			};
-
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				return data;
-			};
-
+			void deserialize();
+			Textmagic::Rest::RequestData serialize();
+		
 			std::string id;
 			std::string phone;
 			std::string contactId;

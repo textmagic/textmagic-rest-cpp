@@ -1,6 +1,8 @@
 #ifndef TEXTMAGIC_UNSUBSCRIBER_H
 #define TEXTMAGIC_UNSUBSCRIBER_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class UnsubscriberModel:public Textmagic::BaseModel {
 		public:

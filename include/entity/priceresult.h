@@ -1,6 +1,8 @@
 #ifndef TEXTMAGIC_PRICERESULT_H
 #define TEXTMAGIC_PRICERESULT_H
 
+#include <entity/base.h>
+
 namespace Textmagic {
 	class PriceResultModel:public Textmagic::BaseModel {
 		public:

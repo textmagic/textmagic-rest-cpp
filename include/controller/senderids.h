@@ -1,3 +1,8 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/senderid.h>
+
 namespace Textmagic {
 	class SenderIdsController: public Textmagic::BaseController<Textmagic::SenderIdModel>   {
 		public:

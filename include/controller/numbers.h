@@ -1,3 +1,8 @@
+#pragma once
+
+#include <controller/base.h>
+#include <entity/number.h>
+
 namespace Textmagic {
 	class NumbersController: public Textmagic::BaseController<Textmagic::NumberModel>   {
 		public:
