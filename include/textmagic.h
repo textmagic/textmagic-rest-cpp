@@ -49,29 +49,8 @@
 namespace Textmagic {
 	class Client {
 		public:
-			Client(std::string login, std::string key) {
-            	rest = new Textmagic::Rest (login, key);
-            };
-
-			~Client(){
-				delete rest;
-				delete _contacts;
-				delete _templates;
-				delete _unsubscribers;
-				delete _lists;
-				delete _customfields;
-				delete _replies;
-				delete _schedules;
-				delete _sessions;
-				delete _bulks;
-				delete _chats;
-				delete _messages;
-	            delete _misc;
-	            delete _numbers;
-	            delete _senderids;
-	            delete _subaccounts;
-			}
-
+			Client(std::string login, std::string key);
+			~Client();
 			Textmagic::Rest* rest;
 
 			Textmagic::ContactsController& Contacts(){

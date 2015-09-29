@@ -1,5 +1,13 @@
 #pragma once
 
+#include "controller/base.h"
+#include "entity/message.h"
+
+
+#include "entity/outgoingmessage.h"
+#include "entity/priceresult.h"
+#include "entity/sendresult.h"
+
 namespace Textmagic {
 	class MessagesController: public Textmagic::BaseController<Textmagic::MessageModel>   {
 		public:
@@ -14,21 +22,13 @@ namespace Textmagic {
 			};
 
 
-			Textmagic::PriceResultModel price(Rest::RequestData& data) {
-				Textmagic::PriceResultModel e(rest.request(basePath + "/price", "GET", data));
-				if (errorHandler(e)) {
-					e.deserialize();
-				}
-				return e;
-			};
-
-			Textmagic::SendResultModel send(Rest::RequestData& data) {
-				Textmagic::SendResultModel e(rest.request(basePath, "POST", data));
-				if (errorHandler(e)) {
-					e.deserialize();
-				}
-				return e;
-			};
-
+			Textmagic::SendResultModel send (const std::string& phone, const std::string& text);
+			Textmagic::PriceResultModel price (const std::string& phone, const std::string& text);
+		
+			Textmagic::SendResultModel send (const OutgoingMessage& mes);
+			Textmagic::PriceResultModel price (const OutgoingMessage& mes);
+		
+			Textmagic::SendResultModel send(Rest::RequestData& data);
+			Textmagic::PriceResultModel price(Rest::RequestData& data);
 	};
 }

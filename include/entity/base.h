@@ -19,21 +19,18 @@ namespace Textmagic {
 				response = "";
 			};
 
-			std::string asString() {
+			std::string asString() const {
 				return response;
 			};
 
-			Json::Value asJsonValue();
+			Json::Value asJsonValue() const;
 		
 			void deserialize(){
 				return;
 		    };
 
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-            	return data;
-			};
-
+			virtual Textmagic::Rest::RequestData serialize() const;
+		
 		private:
 			std::string response;
 

@@ -25,7 +25,7 @@ namespace Textmagic {
 		public:
             typedef struct
                 {
-                  int code;
+                  long code;
                   std::string message;
                   Json::Value errors;
                 } Error;

@@ -10,7 +10,7 @@ void CustomfieldModel::deserialize() {
 };
 
 
-Rest::RequestData CustomfieldModel::serialize(){
+Rest::RequestData CustomfieldModel::serialize() const {
 	Textmagic::Rest::RequestData data;
 	data["name"] = name;
 	return data;

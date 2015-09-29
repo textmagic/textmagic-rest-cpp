@@ -14,8 +14,8 @@ using namespace Textmagic;
 
 const string Rest::API_URL = "https://rest.textmagic.com/api/v2";
 
-static int writer(char *data, size_t size, size_t nmemb, string *buffer){
-	int result = 0;
+static size_t writer(char *data, size_t size, size_t nmemb, string *buffer){
+	size_t result = 0;
 	if (buffer != NULL){
 		buffer->append(data, size * nmemb);
 		result = size * nmemb;

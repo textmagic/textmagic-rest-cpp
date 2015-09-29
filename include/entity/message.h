@@ -9,31 +9,10 @@ namespace Textmagic {
 			MessageModel() : Textmagic::BaseModel(){};
 			MessageModel(const std::string& data) : Textmagic::BaseModel(data){};
 
-			void deserialize() {
-				Json::Value root = this->asJsonValue();
-			 	id = root.get("id", "").asString();
-			 	direction = root.get("direction", "o").asString();
-			 	receiver = root.get("receiver", "").asString();
-				messageTime = root.get("messageTime", "").asString();
-				status = root.get("status", "").asString();
-				text = root.get("text", "").asString();
-				charset = root.get("charset", "").asString();
-				firstName = root.get("firstName", "").asString();
-				lastName = root.get("lastName", "").asString();
-				country = root.get("country", "").asString();
-				sender = root.get("sender", "").asString();
-				price = root.get("price", 0).asFloat();
-				partsCount = root.get("partsCount", 0).asInt();
-
-			};
-
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				return data;
-			};
-
+			void deserialize();
+		
 			std::string id;
-			std::string direction;
+			std::string direction; // ??
 			std::string receiver;
 			std::string messageTime;
 			std::string status;
@@ -45,7 +24,6 @@ namespace Textmagic {
 			std::string sender;
 			float price;
 			int partsCount;
-
 	};
 }
 

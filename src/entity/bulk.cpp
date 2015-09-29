@@ -3,7 +3,7 @@
 
 using namespace Textmagic;
 
-void BulkModel::deserialize() {
+void BulkModel::deserialize()  {
 	Json::Value root = this->asJsonValue();
 	id = root.get("id", "").asString();
 	status = root.get("status", "").asString();
@@ -12,11 +12,4 @@ void BulkModel::deserialize() {
 	createdAt = root.get("createdAt", "").asString();
 	sessionId = root.get("sessionId", "").asString();
 	text = root.get("text", "").asString();
-};
-
-
-
-Rest::RequestData BulkModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
 };

@@ -12,9 +12,3 @@ void ReplyModel::deserialize() {
 	receiver = root.get("receiver", "").asString();
 	
 };
-
-
-Rest::RequestData  ReplyModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

@@ -10,7 +10,8 @@ namespace Textmagic {
 			ScheduleModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
+			// the model is not used in POST/PUT requests
+			//Textmagic::Rest::RequestData serialize() const;
 		
 			std::string id;
 			std::string nextSend;

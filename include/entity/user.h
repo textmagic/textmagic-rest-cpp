@@ -9,29 +9,9 @@ namespace Textmagic {
 			UserModel() : Textmagic::BaseModel(){};
 			UserModel(const std::string& data) : Textmagic::BaseModel(data){};
 
-			void deserialize() {
-				Json::Value root = this->asJsonValue();
-			 	id = root.get("id", "").asString();
-			 	firstName = root.get("firstName", "").asString();
-				lastName = root.get("lastName", "").asString();
-				company = root.get("company", "").asString();
-				username = root.get("username", "").asString();
-				status = root.get("status", "").asString();
-				subaccountType = root.get("subaccountType", "").asString();
-				currency = root["currency"].get("id", "").asString();
-				timezone = root["timezone"].get("timezone", "").asString();
-				timezoneOffset = root["timezone"].get("offset", 0).asInt();
-				balance = root.get("balance", 0).asFloat();
-			};
-
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				data["firstName"] = firstName;
-                data["lastName"] = lastName;
-                data["company"] = company;
-				return data;
-			};
-
+			void deserialize();
+			Textmagic::Rest::RequestData serialize() const;
+		
 			std::string id;
 			std::string firstName;
 			std::string lastName;

@@ -15,7 +15,3 @@ void SpentModel::deserialize() {
 	delta = root.get("delta", 0).asFloat();
 };
 
-Rest::RequestData SpentModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};
