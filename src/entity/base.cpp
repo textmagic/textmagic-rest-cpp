@@ -2,7 +2,7 @@
 
 using namespace Textmagic;
 
-Json::Value BaseModel::asJsonValue(){
+Json::Value BaseModel::asJsonValue() const {
 	Json::Value root;
 	Json::Reader reader;
 	if (!reader.parse(response, root)){
@@ -10,4 +10,10 @@ Json::Value BaseModel::asJsonValue(){
 		return root;
 	}
 	return root;
+};
+
+
+Rest::RequestData BaseModel::serialize() const {
+	Textmagic::Rest::RequestData data;
+	return data;
 };

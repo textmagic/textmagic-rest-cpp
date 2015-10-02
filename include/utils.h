@@ -3,6 +3,8 @@
 
 #include <sstream>
 #include <typeinfo>
+#include <vector>
+#include <json/json.h>
 
 namespace Textmagic {
 	namespace Utils {
@@ -27,6 +29,9 @@ namespace Textmagic {
 			ss << data;
 			return ss.str();
 		};
+		
+		double parseDouble(const Json::Value& value);
+		
 	}
 }
 #endif /* TEXTMAGIC_UTILS_H */

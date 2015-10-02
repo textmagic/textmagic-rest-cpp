@@ -10,8 +10,3 @@ void ChatModel::deserialize() {
 	unread = root.get("unread", 0).asInt();
 	updatedAt = root.get("updatedAt", "").asString();
 };
-
-Rest::RequestData ChatModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

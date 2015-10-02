@@ -11,7 +11,7 @@ void TemplateModel::deserialize() {
 	lastModified = root.get("lastModified", "").asString();
 };
 
-Rest::RequestData TemplateModel::serialize(){
+Rest::RequestData TemplateModel::serialize() const {
 	Textmagic::Rest::RequestData data;
 	data["name"] = name;
 	data["content"] = content;

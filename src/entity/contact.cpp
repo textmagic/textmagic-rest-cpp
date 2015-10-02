@@ -25,7 +25,7 @@ void ContactModel::deserialize() {
 };
 
 
-Rest::RequestData ContactModel::serialize(){
+Rest::RequestData ContactModel::serialize() const {
 	Textmagic::Rest::RequestData data;
 	data["phone"] = phone;
 	data["email"] = email;

@@ -18,8 +18,3 @@ void StatModel::deserialize() {
 	costs = root.get("costs", 0).asFloat();
 	date = root.get("date", "").asString();
 };
-
-Rest::RequestData StatModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};
