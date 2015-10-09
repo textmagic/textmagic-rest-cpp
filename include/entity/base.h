@@ -11,6 +11,8 @@
 namespace Textmagic {
 	class BaseModel {
 		public:
+			std::string id;
+		
 			BaseModel(const std::string& data){
 				response = data;
 			};
@@ -25,13 +27,12 @@ namespace Textmagic {
 
 			Json::Value asJsonValue();
 		
-			void deserialize(){
-				return;
+			virtual void deserialize(){
+				throw std::logic_error("Deserialize is not implemented");
 		    };
-
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-            	return data;
+		
+			virtual Textmagic::Rest::RequestData serialize() const {
+				throw std::logic_error("Serialize is not implemented");
 			};
 
 		private:

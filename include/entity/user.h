@@ -24,7 +24,7 @@ namespace Textmagic {
 				balance = root.get("balance", 0).asFloat();
 			};
 
-			Textmagic::Rest::RequestData serialize(){
+			Textmagic::Rest::RequestData serialize() const {
 				Textmagic::Rest::RequestData data;
 				data["firstName"] = firstName;
                 data["lastName"] = lastName;
@@ -32,7 +32,6 @@ namespace Textmagic {
 				return data;
 			};
 
-			std::string id;
 			std::string firstName;
 			std::string lastName;
 			std::string company;

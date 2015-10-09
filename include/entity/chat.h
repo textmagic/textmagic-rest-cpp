@@ -10,9 +10,7 @@ namespace Textmagic {
 			ChatModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
-		
-			std::string id;
+
 			std::string phone;
 			std::string contactId;
 			int unread;

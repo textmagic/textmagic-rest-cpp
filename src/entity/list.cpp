@@ -13,7 +13,7 @@ void ListModel::deserialize() {
 };
 
 
-Rest::RequestData ListModel::serialize(){
+Rest::RequestData ListModel::serialize() const {
 	Textmagic::Rest::RequestData data;
 	data["name"] = name;
 	data["shared"]		 = Textmagic::Utils::toString((int)shared);

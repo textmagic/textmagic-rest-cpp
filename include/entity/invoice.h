@@ -10,9 +10,7 @@ namespace Textmagic {
 			InvoiceModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
 		
-			std::string id;
 			int bundle;
 			std::string currency;
 			float vat;

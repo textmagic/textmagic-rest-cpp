@@ -11,9 +11,3 @@ void InvoiceModel::deserialize() {
 	paymentMethod = root.get("paymentMethod", "").asString();
 	vat = root.get("vat", 0).asFloat();
 };
-
-
-Rest::RequestData InvoiceModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

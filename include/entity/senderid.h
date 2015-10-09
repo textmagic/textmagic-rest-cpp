@@ -10,9 +10,8 @@ namespace Textmagic {
 			SenderIdModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
+			Textmagic::Rest::RequestData serialize() const;
 		
-			std::string id;
 			std::string senderId;
 			std::string status;
 			std::string userId;

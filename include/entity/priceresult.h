@@ -17,12 +17,6 @@ namespace Textmagic {
 				countries = root["countries"];
 			};
 
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				return data;
-			};
-
-			std::string id;
 			float total;
 			int parts;
 			Json::Value countries;

@@ -27,12 +27,6 @@ namespace Textmagic {
 
 			};
 
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				return data;
-			};
-
-			std::string id;
 			std::string direction;
 			std::string receiver;
 			std::string messageTime;

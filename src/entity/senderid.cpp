@@ -13,7 +13,7 @@ void SenderIdModel::deserialize() {
 	
 };
 
-Rest::RequestData SenderIdModel::serialize(){
+Rest::RequestData SenderIdModel::serialize() const {
 	Textmagic::Rest::RequestData data;
 	data["senderId"] = senderId;
 	data["explanation"] = explanation;

@@ -20,12 +20,6 @@ namespace Textmagic {
 				scheduleId = root.get("scheduleId", "").asString();
 			};
 
-			Textmagic::Rest::RequestData serialize(){
-				Textmagic::Rest::RequestData data;
-				return data;
-			};
-
-			std::string id;
 			std::string href;
 			std::string type;
 			std::string sessionId;

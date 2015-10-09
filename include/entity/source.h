@@ -10,9 +10,7 @@ namespace Textmagic {
 			SourceModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
 		
-			std::string id;
 			Json::Value dedicated;
 			Json::Value user;
 			Json::Value shared;
