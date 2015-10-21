@@ -10,9 +10,7 @@ namespace Textmagic {
 			SessionModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
 		
-			std::string id;
 			std::string startTime;
 			std::string text;
 			std::string source;

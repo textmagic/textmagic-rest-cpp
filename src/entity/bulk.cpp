@@ -13,10 +13,3 @@ void BulkModel::deserialize() {
 	sessionId = root.get("sessionId", "").asString();
 	text = root.get("text", "").asString();
 };
-
-
-
-Rest::RequestData BulkModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

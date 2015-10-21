@@ -10,9 +10,7 @@ namespace Textmagic {
 			BulkModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
 			
-			std::string id;
 			std::string status;
 			int itemsProcessed;
 			int itemsTotal;

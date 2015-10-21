@@ -13,8 +13,3 @@ void SessionModel::deserialize() {
 	price = root.get("price", 0).asFloat();
 	numbersCount = root.get("numbersCount", 0).asInt();
 };
-
-Rest::RequestData SessionModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

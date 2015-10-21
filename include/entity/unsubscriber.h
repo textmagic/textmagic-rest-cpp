@@ -20,13 +20,12 @@ namespace Textmagic {
 
 			};
 
-			Textmagic::Rest::RequestData serialize(){
+			Textmagic::Rest::RequestData serialize() const {
 				Textmagic::Rest::RequestData data;
 				data["phone"] = phone;
 				return data;
 			};
-
-			std::string id;
+		
 			std::string phone;
 			std::string unsubscribeTime;
 			std::string firstName;

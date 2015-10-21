@@ -10,9 +10,7 @@ namespace Textmagic {
 			ReplyModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
 		
-			std::string id;
 			std::string sender;
 			std::string messageTime;
 			std::string text;

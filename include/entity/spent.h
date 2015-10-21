@@ -10,9 +10,7 @@ namespace Textmagic {
 			SpentModel(const std::string& data) : Textmagic::BaseModel(data){};
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
 		
-			std::string id;
 			std::string userId;
 			std::string date;
 			float balance;

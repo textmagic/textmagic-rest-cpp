@@ -11,8 +11,3 @@ void SourceModel::deserialize() {
 	shared = root["shared"];
 	senderIds = root["senderIds"];
 };
-
-Rest::RequestData SourceModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

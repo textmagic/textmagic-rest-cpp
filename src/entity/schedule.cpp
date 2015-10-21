@@ -9,8 +9,3 @@ void ScheduleModel::deserialize() {
 	nextSend = root.get("nextSend", "").asString();
 	sessionId = root.get("sessionId", "").asString();
 };
-
-Rest::RequestData ScheduleModel::serialize(){
-	Textmagic::Rest::RequestData data;
-	return data;
-};

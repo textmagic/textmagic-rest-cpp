@@ -17,8 +17,8 @@ namespace Textmagic {
             };
 
 			void deserialize();
-			Textmagic::Rest::RequestData serialize();
-			std::string id;
+			Textmagic::Rest::RequestData serialize() const;
+
 			std::string firstName;
 			std::string lastName;
 			std::string email;

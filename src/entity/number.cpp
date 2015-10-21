@@ -18,7 +18,7 @@ void NumberModel::deserialize() {
 };
 
 
-Rest::RequestData NumberModel::serialize(){
+Rest::RequestData NumberModel::serialize() const {
 	Textmagic::Rest::RequestData data;
 	data["phone"] = phone;
 	data["country"] = country;
